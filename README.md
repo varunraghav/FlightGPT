@@ -1,6 +1,32 @@
-# FlightGPT
-A chatbot designed to answer your questions about flights.
+# ✈️ Airline Policy and Flight Query Chatbot: Program Overview
 
+This program implements a chatbot system that combines **Retrieval-Augmented Generation (RAG)** and **API-based flight search** to answer user queries related to airline policies and flight availability. It processes user input to classify and respond appropriately, leveraging **LLMs**, **vector databases**, and external APIs.
+
+---
+
+## 🚀 Key Features
+
+1. **Query Classification**:
+   - Classifies user queries into three categories:
+     - **RAG-Related**: Queries about travel policies (e.g., luggage rules, traveling with pets, etc.).
+     - **API-Related**: Questions requiring live flight information (e.g., cheapest flights, flight performance).
+     - **General**: Queries outside the chatbot's scope.
+
+2. **Policy Retrieval**:
+   - Uses **LLamaIndex** with **ChromaDB** as the vector store for retrieving policy documents.
+   - Handles both specific airline queries and general ones using metadata filtering.
+
+3. **Flight Search**:
+   - Supports various flight queries via APIs, including:
+     - Flight availability between two cities.
+     - Cheapest flight offers.
+     - Performance of specific airports.
+
+4. **Adaptive Query Engine**:
+   - Dynamically configures the query engine based on the classification of the input (e.g., specific airline queries use metadata filtering).
+
+5. **Multimodal Input Handling**:
+   - Accepts free text from the user and extracts structured information (e.g., origin, destination, and date) using LLMs.
 ---
 
 ## Present Flow:
